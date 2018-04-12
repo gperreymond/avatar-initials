@@ -84,12 +84,8 @@ func main() {
 		grad := gg.NewLinearGradient(width, height, 0, 0)
 		grad.AddColorStop(0, color[0])
 		grad.AddColorStop(1, color[1])
+		dc.DrawRoundedRectangle(0, 0, width, height, 5*scale)
 		dc.SetFillStyle(grad)
-		dc.MoveTo(0, 0)
-		dc.LineTo(width, 0)
-		dc.LineTo(width, height)
-		dc.LineTo(0, height)
-		dc.ClosePath()
 		dc.Fill()
 		// Fonts and text
 		dc.LoadFontFace("./fonts/RobotoMono-Bold.ttf", 50*scale)
