@@ -68,7 +68,7 @@ func main() {
 		j := strings.Index("ABCDEFGHIJKLMNOPQRSTUVWXYZ", string(text[1]))
 		k := 0
 		if i != -1 && j != -1 {
-			k = (i + j*10) / 92
+			k = (i + j*10) % 3
 		}
 		color := blue
 		if k == 0 {
